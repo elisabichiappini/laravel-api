@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+//importo modello Project
+use App\Models\Project;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+//rotta per api che genera questo url = http://127.0.0.1:8000/api/test
+Route::get('test',[ProjectController::class, 'index']);

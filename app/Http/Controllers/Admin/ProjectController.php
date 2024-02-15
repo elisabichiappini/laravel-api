@@ -97,6 +97,10 @@ class ProjectController extends Controller
         $data = $request->validated();
         //campo fatto a mano
         $project->slug = Str::of($data['title'])->slug('-');
+        // salvo se è settata la check delle immagini
+        if (isset($data['project_img'])) {
+            $project->project_img = Storage::put('uploads', $data['project_img']);
+        }
         // salvo se è settata la check delle technologies
         if (isset($data['technologies'])) {
             $project->technologies()->sync($data['technologies']);

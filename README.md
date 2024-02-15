@@ -110,7 +110,7 @@ I task:
 
 ✨ 9_febbraio_2024
 
-# Descrizione consegna
+# 3 fase relazioni many to many
 Continuazione progettazione portfolio / Laravel Boolfolio - Project Technology, ggiungiamo una nuova entità __Technology__. Questa entità rappresenta le tecnologie utilizzate ed è in relazione *many to many* con i progetti.
 I task:
 1. creare la migration per la tabella technologies
@@ -121,9 +121,17 @@ I task:
 6. permettere all’utente di associare le tecnologie nella pagina di creazione e modifica di un progetto
 7. gestire il salvataggio dell’associazione progetto-tecnologie con opportune regole di validazione
 
-##### Bonus 1:
-creare il seeder per il model Technology.
-##### Bonus 2:
-aggiungere le operazioni CRUD per il model Technology, in modo da gestire le tecnologie utilizzate nei progetti direttamente dal pannello di amministrazione.
-
 ✨ 12_febbraio_2024
+
+# Descrizione consegna:
+1. nome repo 1: laravel-api
+Aggiungiamo al nostro progetto Laravel una nuovo Api/ProjectController. Questo controller risponderà a delle richieste via API e si occuperà di restituire la lista dei progetti presenti nel database in formato json.
+2. Testiamo la chiamata API tramite Postman e assicuriamoci di ricevere i dati correttamente.
+3. nome repo 2: vite-boolfolio
+Iniziamo ad occuparci della parte front-office della nostra applicazione: creiamo un nuovo progetto Vue 3 con Vite e installiamo axios.
+Colleghiamo questo progetto ad una repo separata.
+4. Nel componente principale della nostra Vue App facciamo una chiamata API all’endpoint costruito nel progetto Laravel (milestone 1) e recuperiamo tutti i progetti dal nostro back-end.
+Stampiamo in console i risultati e verifichiamo di ricevere i dati correttamente.
+5. Creiamo un nuovo componente ProjectCard, che corrisponde ad una card per visualizzare un progetto. Utilizziamo questo componente per visualizzare tutti i progetti ricevuti tramite API.
+
+✨ 15_febbraio_2024
