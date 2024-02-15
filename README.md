@@ -124,7 +124,7 @@ I task:
 ✨ 12_febbraio_2024
 
 # Descrizione consegna:
-1. nome repo 1: laravel-api
+1. (fatto) nome repo 1: laravel-api
 Aggiungiamo al nostro progetto Laravel una nuovo Api/ProjectController. Questo controller risponderà a delle richieste via API e si occuperà di restituire la lista dei progetti presenti nel database in formato json.
 2. Testiamo la chiamata API tramite Postman e assicuriamoci di ricevere i dati correttamente.
 3. nome repo 2: vite-boolfolio
