@@ -82,6 +82,8 @@ class TypeController extends Controller
      */
     public function destroy(Type $type)
     {
-        //
+        $type_id = $type->id;
+        $type->delete();
+        return redirect()->route('admin.types.index')->with('message', "Categoria $type_id cancellata correttamente");
     }
 }

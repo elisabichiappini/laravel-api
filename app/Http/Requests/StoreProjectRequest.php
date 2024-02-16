@@ -25,7 +25,7 @@ class StoreProjectRequest extends FormRequest
             'title' => ['required', 'unique:projects,title', 'max:50', 'string'],
             'project_img' => ['nullable', 'image', 'max:2048'],
             'description' => ['max:400'],
-            //per validazione in store
+            'born' =>['date'],
             'type_id' => ['nullable', 'exists:types,id'],
             'technologies' => ['nullable', 'exists:technologies,id']
         ];
