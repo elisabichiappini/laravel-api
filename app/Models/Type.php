@@ -12,7 +12,8 @@ class Type extends Model
     protected $guarded = ['slug'];
     
     //relazione una categoria può appartenere a un progetto
-    public function projects() {
-        return $this->hasOne(Project::class);
+    public function projects() 
+    {
+        return $this->hasMany(Project::class);
     }
 }

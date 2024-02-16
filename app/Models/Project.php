@@ -11,7 +11,7 @@ class Project extends Model
     
     protected $guarded = ['slug', 'project_img', 'technologies'];
     
-    public function type() {
+    public function types() {
         return $this->belongsTo(Type::class);
     }
 

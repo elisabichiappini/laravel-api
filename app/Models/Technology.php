@@ -12,7 +12,8 @@ class Technology extends Model
     protected $guarded = ['slug'];
 
     //relazione più tecnologie possono appartenere a più progetti
-    public function projects() {
+    public function projects() 
+    {
         return $this->belongsToMany(Project::class)->withTimestamps();
     }
 }
