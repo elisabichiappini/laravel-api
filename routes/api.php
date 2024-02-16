@@ -21,5 +21,5 @@ use App\Models\Project;
 //     return $request->user();
 // });
 
-//rotta per api che genera questo url = http://127.0.0.1:8000/api/test
-Route::get('test',[ProjectController::class, 'index']);
+//rotta per api che genera questo url = http://127.0.0.1:8000/api/projects
+Route::get('projects',[ProjectController::class, 'index']);
