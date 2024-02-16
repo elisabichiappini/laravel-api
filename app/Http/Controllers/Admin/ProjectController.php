@@ -50,9 +50,9 @@ class ProjectController extends Controller
         $project->slug = Str::of($project->title)->slug('-');
         $project->description = $data['description'];
         $project->type_id = $data['type_id'];
-        // salvo se è settata la check delle immagini
+        // caricare e salvare immagine con il metodo Storage
         if (isset($data['project_img'])) {
-            $project->project_img = Storage::put('uploads', $data['project_img']);
+            $project->project_img = Storage::disk('public')->put('uploads', $data['project_img']);
         }
         //controllo invio dati img
         // dd($request->project_img);
@@ -97,9 +97,9 @@ class ProjectController extends Controller
         $data = $request->validated();
         //campo fatto a mano
         $project->slug = Str::of($data['title'])->slug('-');
-        // salvo se è settata la check delle immagini
+        // caricare e salvare immagine con il metodo Storage
         if (isset($data['project_img'])) {
-            $project->project_img = Storage::put('uploads', $data['project_img']);
+            $project->project_img = Storage::disk('public')->put('uploads', $data['project_img']);
         }
         // salvo se è settata la check delle technologies
         if (isset($data['technologies'])) {
