@@ -23,3 +23,5 @@ use App\Models\Project;
 
 //rotta per api che genera questo url = http://127.0.0.1:8000/api/projects
 Route::get('projects',[ProjectController::class, 'index']);
+//rotta per api ma per visualizzare dettaglio progetto
+Route::get('projects/{slug}', [ProjectController::class, 'show']);
