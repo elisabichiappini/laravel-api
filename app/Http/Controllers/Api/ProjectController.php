@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
     public function index() {
-        // $projects = Project::all();
+        request()->validate([
+            'key'=>['nullable', 'string', 'min:5'],
+        ]);
         $projects = Project::with('technologies', 'type')->paginate(9);
         return response()->json([
             'success' => true,
