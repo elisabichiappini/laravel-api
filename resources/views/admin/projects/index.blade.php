@@ -43,6 +43,10 @@
                     @if ($project->project_img)
                     <span class="badge text-bg-success">Allegato</span>
                     @endif
+                
+                    @if($project->comments()->count())
+                    <span class="badge text-bg-info">commenti:{{ $project->comments()->count()}}</span>
+                    @endif
                 </td>
                 <td>{{ $project->born }}</td>
                 <td class="text-end">
