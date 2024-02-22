@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Comment;
 
 class Project extends Model
 {
@@ -17,5 +18,10 @@ class Project extends Model
 
     public function technologies() {
         return $this->belongsToMany(Technology::class)->withTimestamps();
+    }
+
+    //cardinalità a un progetto ha più commenti
+    public function comments() {
+        return $this->hasMany(Comment::class);
     }
 }
