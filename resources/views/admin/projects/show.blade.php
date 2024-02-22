@@ -39,6 +39,19 @@
         <img src="{{ asset('storage/' . $project->project_img) }}" alt="{{ $project->title }}">
     @endif
     <!--elementi in vista del singolo progetto-->
-
+    <hr>
+    <!--comments-->
+    <div class="container">
+        <h3>Commenti:</h3>
+        <ul>
+            @foreach($project->comments as $comment)
+            <li>
+                <h5>{{ $comment->author ?: 'Utente anonimo'}}</h5>
+                <p>{{ $comment->content }}</p>
+            </li>
+            @endforeach
+        </ul>
+    </div>
+    <!--/comments-->
     
 @endsection
