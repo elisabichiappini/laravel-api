@@ -1,11 +1,10 @@
 <?php
 
-use App\Http\Controllers\Api\CommentController as ApiCommentController;
+
+use App\Http\Controllers\Api\CommentController as CommentController;
 use App\Http\Controllers\Api\ProjectController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-//importo modello Project
-use App\Models\Project;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +26,4 @@ Route::get('projects',[ProjectController::class, 'index']);
 //rotta per api ma per visualizzare dettaglio progetto
 Route::get('projects/{slug}', [ProjectController::class, 'show']);
 //rotta crezione e salvataggio nuovi commenti
-Route::post('comments',[ApiCommentController::class, 'store'])->name('comments.store');
+Route::post('comments', [CommentController::class, 'store'])->name('comments.store');
