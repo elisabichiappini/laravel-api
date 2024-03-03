@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Api\CommentController\CommentController;
+use App\Http\Controllers\Api\CommentController;
 use App\Http\Controllers\Api\ProjectController;
 use Illuminate\Support\Facades\Route;
 
