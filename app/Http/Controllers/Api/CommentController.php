@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Mail\NewComment;
 use App\Models\Comment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class CommentController extends Controller
 {
@@ -22,6 +24,9 @@ class CommentController extends Controller
         $new_comment->fill($request->all());
         $new_comment->save();
        
+        //invio mail/notifica a qualcuno
+        Mail::to("info@portfolio_key.com")->send(new NewComment($new_comment));
+
         return $new_comment;
  
     }

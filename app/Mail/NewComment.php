@@ -19,10 +19,10 @@ class NewComment extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct($_comment)
+    public function __construct($comment)
     {
         //valore dell'istanzia uguale a tutto il commento che ho inviato
-        $this->comment = $_comment;
+        $this->comment = $comment;
     }
 
     /**
@@ -32,7 +32,7 @@ class NewComment extends Mailable
     {
         return new Envelope(
             // file .env MAIL_FROM_ADDRESS="info@portfolio_keyup.com"
-            replyTo: 'info@portfolio_key.com',
+            replyTo: "info@portfolio_key.com",
             subject: 'New Comment',
         );
     }
